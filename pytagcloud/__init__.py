@@ -8,7 +8,7 @@ import colorsys
 import math
 import os
 import pygame
-import simplejson
+from django.utils import simplejson
 
 
 TAG_PADDING = 5

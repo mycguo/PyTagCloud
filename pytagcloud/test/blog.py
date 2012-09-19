@@ -16,7 +16,7 @@ class Test(unittest.TestCase):
     
     def setUp(self):
         self.test_output = os.path.join(os.getcwd(), 'out')
-        self.hound = open(os.path.join(os.getcwd(), 'pg2852.txt'), 'r')
+        self.hound = open(os.path.join(os.getcwd(), 'blog.txt'), 'r')
         
         if not os.path.exists(self.test_output):
             os.mkdir(self.test_output )            
@@ -24,29 +24,6 @@ class Test(unittest.TestCase):
     def tearDown(self):
         self.hound.close()
         
-    def test_tag_counter(self):
-        tag_list = get_tag_counts(self.hound.read())[:50]     
-        self.assertTrue(('sir', 350) in tag_list)
-
-    def test_make_tags(self):
-        mtags = make_tags(get_tag_counts(self.hound.read())[:60])
-        found = False
-        for tag in mtags:
-            if tag['tag'] == 'sir' and tag['size'] == 40:
-                found = True
-                break
-            
-        self.assertTrue(found)
-
-    def test_layouts(self):
-        start = time.time()
-        tags = make_tags(get_tag_counts(self.hound.read())[:80], maxsize=120)
-        for layout in LAYOUTS:
-            create_tag_image(tags, os.path.join(self.test_output, 'cloud_%s.png' % layout),
-                             size=(900, 600),
-                             background=(255, 255, 255, 255),
-                             layout=layout, fontname='Lobster')
-        print "Duration: %d sec" % (time.time() - start)
         
     def test_large_tag_image(self):
         start = time.time()
@@ -61,7 +38,7 @@ class Test(unittest.TestCase):
         """
         HTML code sample
         """
-        tags = make_tags(get_tag_counts(self.hound.read())[:100], maxsize=120, colors=COLOR_SCHEMES['goldfish'])
+        tags = make_tags(get_tag_counts(self.hound.read())[:100], maxsize=36, colors=COLOR_SCHEMES['goldfish'])
         data = create_html_data(tags, (220,300), layout=LAYOUT_HORIZONTAL, fontname='PT Sans Regular')
         
         template_file = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'web/template.html'), 'r')    

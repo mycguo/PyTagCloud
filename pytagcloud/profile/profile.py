@@ -23,7 +23,7 @@ def init():
     tags = make_tags(get_tag_counts(hound.read())[:50], maxsize=120, colors=COLOR_SCHEMES['audacity'])
 
 def run():
-    create_tag_image(tags, os.path.join(test_output, 'cloud_profile.png'), size=(1280, 900), background=(0, 0, 0, 255), layout=LAYOUT_MIX, crop=True, fontname='Lobster', fontzoom=1)
+    create_tag_image(tags, os.path.join(test_output, 'cloud_profile.png'), size=(1280, 900), background=(0, 0, 0, 255), layout=LAYOUT_MIX, fontname='Lobster')
 
 if __name__ == '__main__':
     

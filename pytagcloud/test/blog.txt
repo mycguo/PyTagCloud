@@ -1,0 +1,42 @@
+Python Tag Cloud CSS Prettify Python java script nodejs Python appengine python Python Tag Cloud 
+Python Tag Cloud 
+Python Tag Cloud 
+Python Tag Cloud 
+Python Tag Cloud 
+Python Cloud 
+Python Cloud 
+Python Cloud 
+Python Cloud 
+Python Cloud 
+Python Cloud 
+nodejs Python appengine
+nodejs Python appengine
+nodejs Python appengine
+nodejs Python appengine
+nodejs Python appengine
+nodejs Python appengine
+nodejs Python appengine
+java
+java
+java
+java
+The next task is to create Tag Cloud for this blog, this is a good reference: Tag Cloud With Python
+It turns out the the https://github.com/atizo/PyTagCloud is using a library called pygame which is not available in AppEngine, and http://code.google.com/p/feed-tagcloud-appengine/ is tied to Google's bog platform. Need to search for new solutions.
+
+Most of python syntax is pretty simple and straight forward, but I sometime confused with the function definition one. Here is a reminder to my self:
+kind: regular input parameter
+*arguments: all the other input parameter except keyword arguments
+**keywrods: the keyword argument, which must be at the last. Keyword argument is in the form of key='value'
+
+
+I have been interested in Nodejs for a while. I am very excited as a start. I am kind of disappointed after a while, a few if the issues I faced:
+There are no mature framework out there. Many of the existing framework are stepping on the toes of each other. You have to completely rewrite your code once you change frameworks because they might listen to the same message. The message you are listening might be hijacked by others (so you never get it).
+No IDE support. Given the nature of javascript, it is kind of understandable, but it impacts productivity a lot. 
+Poor documentation of frameworks. Even worse, the framework often changes dramatically from one version to another. You have to relearn (and redo) everything again.
+Debug is hard, sometime there is no error at all. Most of the time, the exception is not where the problem is.
+I am going to wait for a while for the framework and tools to catch up.
+
+
+I have been asking myself the question, "why learn python"? It seems I enjoyed using it, otherwise I won't try the Appengine with Python. I want to know what other experts are saying, then I find this post:
+http://www.linuxjournal.com/article/3882
+I must agree that I have the similar feeling. I just can not put to words like that.
